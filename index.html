@@ -163,7 +163,15 @@
         <div class="content has-text-justified">
           <img class="thumbnail" src="./static/images/method3.png" style="width:100%; margin-bottom:20px">
           <p>
-            
+            Left: S4MC pipeline follows a teacher–student setup
+			for semi-supervised segmentation. Labeled images are fed to the student to generate a supervised
+			loss term, while unlabeled images are fed to both teacher and student. A threshold <math>γ_t</math> is dynamically
+			chosen based on the teacher network predictions and applied to the refined pseudo-labels. Right:
+			proposed pseudo-label refinement module uses neighboring pixels to adapt the per-class predictions.
+			The class distribution of one pixel that passes the threshold for the red
+			class (dog), and after refinement, does not, since the margin between that and the blue class (cat) is
+			lower. <!---Both input images were created with the assistance of DALL-E 2 (Ramesh et al., 2022) and
+			annotated by the authors --->
           </p>
         </div>
       </div>
