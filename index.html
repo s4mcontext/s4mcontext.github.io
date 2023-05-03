@@ -150,7 +150,7 @@
     <!-- Model. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
+        <h2 class="title is-3" id="method">Method</h2>
         <div class="content has-text-justified">
           <img class="thumbnail" src="./static/images/method3.png" style="width:100%; margin-bottom:20px">
           <p>
@@ -212,7 +212,21 @@
 		<div class="columns is-centered has-text-centered">
 			<h2 class="title is-3">Results</h2>
 			<!--- TODO: add result images here /-->
-		
+			
+			<img src="static/images/result1.png"/>
+			<img src="static/images/result2.png"/>
+			
+			<b>Example of refined pseudo-labels.</b><br/>
+			The outputs of two trained models and the annotated ground truth.
+			<b>Ours:</b> The outputs of a model trained as explained in the <a href="#method">method</a>.
+			<b>Baseline:</b> The outputs of a model with the same training scheme apart from the usage of contextual information <!---as in \cref{sec:s4n}. --->
+			<b>Left to right:</b> The ground truth labels from the dataset, 
+			the predictions of the baseline model, the predictions of our model,
+			a heat map of <math>\kappa_{margin}}^{-1}</math> of the predictions of the baseline model, and a heat map of <math>{\kappa_{margin}}^{-1}<math> of the predictions of our model.
+			<b>Heat map</b>: The original image with color markings from blue to red, from lower to higher values of <math>{\kappa_{margin}}^{-1}</math> respectively.
+			The baseline model predicts pixels as unassociated with classes of adjacent pixels and classes that do not occur in the image. The baseline predictions generally have higher <math>{\kappa_{margin}}^{-1}</math>
+			values, i.e., lower <math>\kappa_{margin}</math> values.
+			
 		</div>
 	</div>
 
