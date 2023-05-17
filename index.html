@@ -100,15 +100,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               
-              <span class="link-block">
-                <a href="" 
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv (Coming Soon!)</span>
-                </a>
-              </span>
+            
 
               <!-- Code Link. -->
               <span class="link-block">
@@ -159,8 +151,8 @@
             Left: S4MC pipeline follows a teacher–student setup
 			for semi-supervised segmentation. Labeled images are fed to the student to generate a supervised
 			loss term, while unlabeled images are fed to both teacher and student. A threshold is dynamically
-			chosen based on the teacher network predictions and applied to the refined pseudo-labels. Right:
-			proposed pseudo-label refinement module uses neighboring pixels to adapt the per-class predictions.
+			chosen based on the teacher network predictions and applied to the refined confidence. Right:
+			proposed confidence refinement module uses neighboring pixels to adapt the per-class predictions.
 			The class distribution of one pixel that passes the threshold for the red
 			class (dog), and after refinement, does not, since the margin between that and the blue class (cat) is
 			lower. <!---Both input images were created with the assistance of DALL-E 2 (Ramesh et al., 2022) and
@@ -218,7 +210,7 @@
 				<img src="static/images/result2.png" class="thumbnail"  style="width:100%; margin-bottom:10px"/>
 				<img src="static/images/result1.png" class="thumbnail"  style="width:100%; margin-bottom:20px"/>
 				<p>
-				<b>Example of refined pseudo-labels.</b>
+				<b>Example of refined confidence.</b>
 				The outputs of two trained models and the annotated ground truth. </p><p>
 				<b>Ours:</b> The outputs of a model trained as explained in the <a href="#method">method</a>.</p><p>
 				<b>Baseline:</b> The outputs of a model with the same training scheme apart from the usage of contextual information <!---as in \cref{sec:s4n}. --->
